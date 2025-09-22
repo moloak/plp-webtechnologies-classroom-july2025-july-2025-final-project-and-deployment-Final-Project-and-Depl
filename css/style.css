@@ -1,0 +1,320 @@
+body {
+    font-family: 'Binance';
+    src: url('./fonts/binancePlex/BinancePlex-SemiBold.otf') format('opentype');
+    margin: 0;
+    padding: 0;
+    background:#363c46;
+    color: bisque;
+}
+/* style for blog and about container*/
+.blog-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px; /* Adjust spacing between blogs */
+    margin-top: 20px;
+}
+.blog, .blog2 {
+    padding: 20px;
+    background: #474d57;
+    border-radius: 10px;
+    width: 40%;
+    text-align: justify;
+    position: relative;
+    margin: 0 auto;
+    color: burlywood;
+}
+.blog{
+    margin-left: 60px;  
+}
+.blog2{
+    margin-right: 60px;  
+}
+/* styling for blog container animation */
+@property --angle{
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+.blog::after, .blog::before, .blog2::after, .blog2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 70%, maroon, red, #722F37, #8D070E);
+    top : 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1; /* Ensure the gradient is behind the text */
+    padding: 1.5px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+.blog::before , .blog2::before {
+    filter: blur(50px);
+    opacity: 0.5;
+}
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.logo-title {
+    display: flex;
+    font-family: 'Binance';
+    src: url('./fonts/binancePlex/BinancePlex-SemiBold.otf') format('opentype');
+}
+.logo {
+    width: 80px;
+    height: 60px;
+    margin-top: 5px;
+}
+
+/* styling for navigation bar and contents */
+.navbar nav a {
+    margin-right: 20px; /* Adds space to the right of each nav item */
+    text-decoration: none; /* Optional: removes underline */
+    color: inherit; /* Optional: keeps text color consistent */
+}
+.navbar nav a:last-child {
+    margin-right: 10px; /* Removes margin from the last nav item */
+}
+.navbar {
+    background-color: #474d57;
+    display: flex;               
+    align-items: center;        
+    justify-content: space-between; 
+}
+.navbutton:hover{
+    color: maroon;
+}
+
+/* read more button */
+.more-content {
+  display: none; /* Hides the content by default */
+}
+.read-more-btn, #openModal{
+    border:0;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 12px 20px; 
+}
+.read-more-btn{
+    background: #363c46;
+    margin: 0;
+}
+.read-more-btn:hover{
+    background: maroon;
+    animation: heartbeat 1.5s infinite;
+}
+#openModal{
+    background: maroon;
+    margin-left: 60px;
+}
+#openModal:hover{
+    background: red;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* image slider */
+.imageslider {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.imageslide-track {
+    display: flex;
+    width: calc(250px * 6);
+    animation: scroll 40s linear infinite;
+}
+.imageslide-track:hover{
+    animation-play-state: paused;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 3));
+    }
+}
+.imageslide {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+img{
+    width: 100%;
+    transition: transform 1%;
+}
+img:hover {
+    transform: translateZ(15px);
+}
+
+/* gradient shadows for slider */
+.imageslider::after, .imageslider::before{
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 0%, rgba(255,255,255,0) 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 1;
+}
+.imageslider::before {
+    left: 0;
+    top: 0;
+}
+.imageslider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(0deg);
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+}
+
+/* styling for contact sessions */
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+}
+.social{
+    padding-left: 60px;
+}
+
+/* styling for form on partner page */
+form {
+    width: 300px;
+    padding: 50px;
+    border: 1px solid maroon;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #474d57;;
+}
+.error {
+    color: maroon;
+    font-size: 0.9em;
+}
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+h3, .formfill {
+    text-align: center;
+    color: bisque;
+}
+
+/* media queries for responsive web design */
+@media (max-width: 900px) {
+    .blog-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .blog, .blog2 {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .blog {
+        margin-left: 0;
+    }
+    .blog2 {
+        margin-right: 0;
+    }
+    .imageslider {
+        width: 100%;
+        height: auto;
+    }
+    .logo-title h1 {
+        font-size: 1.2rem;
+    }
+    .logo {
+        width: 50px;
+        height: 40px;
+    }
+    nav a {
+        margin-right: 10px;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 5px;
+    }
+    .logo-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo-title h1 {
+        font-size: 1rem;
+    }
+    nav {
+        width: 100%;
+        margin-top: 10px;
+    }
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    form {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+
+    }
+}
+
+/* Styling to animate modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1px);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  animation: scaleUp 0.5s ease forwards;
+  width: 200px;
+  text-align: justify;
+  color: black;
+}
+@keyframes scaleUp {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.modal.show {
+  display: flex;
+}
+
