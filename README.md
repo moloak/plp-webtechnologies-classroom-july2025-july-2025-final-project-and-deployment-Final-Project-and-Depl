@@ -1,90 +1,98 @@
-# 📦 Final Assignment: Build, Organize, and Deploy a Multipage Website
+# KEEF Website Documentation
 
-You're now ready to bring everything together—HTML, CSS, JavaScript, planning, structure, and deployment. This final project challenges you to **conceptualize, build, and deploy a multi-page website** that is responsive, interactive, and ready for the real world.
-
-This assignment will guide you from planning your site all the way to deploying it online. Let’s make your project *production-worthy*! 🚀
-
----
-
-## 🌐🎯 Part 1: Planning and Organizing a Multipage Website
-
-Before you write any code, take time to plan:
-
-* Define your website's purpose (portfolio, product showcase, blog, etc.)
-* Outline 3–5 pages (e.g., Home, About, Services, Contact, Gallery)
-* Sketch or describe the layout of each page
-* Map out internal navigation (how pages link to one another)
-
-**Goal:** Show intentional structure and user journey across the site.
+Welcome to the documentation for the **Karinate Education & Empowerment Foundation (KEEF)** website- a website dveloped by Mololuwa Akinfolami as submission to the PLP web development module for week 8!  
+This site supports the foundation's mission of education and empowerment and is available live at:  
+**🌐 [https://keef.vercel.app/](https://keef.vercel.app/)**
 
 ---
 
-## 🌍💻 Part 2: Build the Website Using HTML5, CSS, and JavaScript
+## 🏢 Purpose of the Website
 
-Using your plan, begin building:
-
-* Use HTML5 for semantic structure
-* Apply CSS for responsive layout, styling, and animations
-* Use JavaScript to add interactivity (menus, forms, toggles, dynamic content)
-
-Each page should:
-
-* Be mobile-responsive
-* Share a consistent layout/header/footer
-* Include at least one interactive element (e.g., form validation, toggle menu, animation on scroll)
-
-**Goal:** Integrate everything you’ve learned in a cohesive, functioning project.
+The KEEF website is the digital presence for a non-governmental organization dedicated to breaking barriers in education and empowerment in Nigeria.  
+It provides information, shares impact stories, and facilitates community engagement through its blog, contact options, and partnership opportunities.
 
 ---
 
-## 🛠️🚀 Part 3: Best Practices for Code Organization
+## 🌍 Website Structure
 
-Before deployment, refactor your project to follow production-friendly practices:
+The website is built using **HTML, CSS, and JavaScript**.  
+It has three main pages:
 
-* Organize files in folders (`/css`, `/js`, `/images`, etc.)
-* Write clean, modular, and commented code
-* Use meaningful file names and relative paths
-* Validate your HTML/CSS and test on different screen sizes
-
-**Goal:** Prepare your codebase to be readable, maintainable, and scalable.
+- **Home**: Foundation news, blog stories, image slider, and contact/social links.
+- **About**: Information about the foundation's mission, vision, and activities.
+- **Partner**: Form for prospective partners, with JavaScript form validation.
 
 ---
 
-## 🌐🚀 Part 4: Introduction to Hosting and Deployment
+## Home Page (`index.html`)
 
-Once your project is complete, choose a method to **host your site online**.
+This page is the gateway to KEEF's mission and current activities.
 
-You can use:
+### Main Features
 
-* **GitHub Pages** (great for portfolios and static sites)
-* **Netlify** (powerful CI/CD features and easy form support)
-* **Vercel** (lightning-fast deployment for frontend projects)
-
-Deploy your project and confirm that:
-
-* All links and scripts work
-* It loads properly on mobile and desktop
-* It has a clear, shareable URL
-
-**Goal:** Publish your work online and make it accessible to the world.
-
----
-
-## Deliverables
-
-1. A GitHub repository containing:
-
-   * Your complete project code, properly organized
-   * A `README.md` file explaining your project purpose, structure, and live URL
-2. A live deployed website (hosted via GitHub Pages, Netlify, or Vercel)
+- **Navigation Bar**:  
+  Quick access to Home, About, Partner, and Contact sections.
+- **Blog Section**:  
+  Two blog posts highlight recent and upcoming foundation initiatives.
+- **Image Slider**:  
+  A carousel displays heartwarming photos of KEEF’s activities.
+- **Contact Section**:  
+  Users can reach out via Instagram or email links.
+- **Footer**:  
+  Copyright.
 
 ---
 
-## Outcome
 
-* Clarity and thoroughness of planning documentation
-* Proper use of HTML5, CSS, and JavaScript across multiple pages
-* Responsive and accessible design
-* Clean, well-organized, and commented code
-* Successful live deployment with a working link
-* Evidence of following best practices
+## Partner Page (`partner.html`)
+
+- **Form**: Lets potential partners submit interest.
+- **Validation**: JavaScript ensures required fields are filled and valid before submission.
+
+---
+
+## About Page (`about.html`)
+
+The `about.html` file is a core page for the Karinate Education & Empowerment Foundation (KEEF) website. It introduces the organization, provides navigation, and features a modal-based donation prompt. The page uses HTML, CSS, and JavaScript for structure, styling, and interactive functionality.
+
+---
+
+## Purpose and Structure
+
+This file builds the "About" page for KEEF. Its main goals are:
+
+- Present foundational information about KEEF.
+- Offer clear navigation to other site areas.
+- Encourage donations via a modal popup.
+- Guide users to the partner page for donation instructions.
+
+---
+
+## 🛠️ Stack & Technologies
+
+| **Technology** | **Role**                                   |
+|----------------|--------------------------------------------|
+| HTML           | Structure and content                      |
+| CSS            | Styling, image slider, responsive layout, button animation   |
+| JavaScript     | UI interaction, blog toggling, modal toggling, form validation |
+| Hosting        | [Vercel](https://vercel.com/) (deployment) |
+
+---
+
+## 🌐 Live Demo
+
+Experience the website here:  
+**[https://keef.vercel.app/](https://keef.vercel.app/)**
+
+---
+
+## 📝 Summary
+
+- **KEEF’s site** is a straightforward, user-centric platform for sharing impact, fostering connections, and inviting partnerships.
+- Built with **HTML, CSS, and JavaScript** for maximum compatibility and speed.
+- Features include a blog, image slider, contact/social links, and a partner form (validated by JavaScript).
+- The site is live and accessible to everyone in the community and beyond.
+
+---
+
+**For more details, visit [https://keef.vercel.app/](https://keef.vercel.app/)** ✨

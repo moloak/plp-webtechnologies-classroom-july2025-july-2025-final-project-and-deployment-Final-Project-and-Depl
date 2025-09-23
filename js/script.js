@@ -1,4 +1,4 @@
-// Run modal only on home page
+// Run modal only on about page
 if (document.body.id === "aboutPage") {
   function setupModal(modalId, openBtnId, closeBtnId) {
     const modal = document.getElementById(modalId);
@@ -20,7 +20,7 @@ if (document.body.id === "aboutPage") {
 }
 
 
-// Run blog "Read More" only on blog page
+// Run blog "Read More" only on home page
 if (document.body.id === "homePage") {
   document.querySelectorAll('.blog, .blog2').forEach(container => {
     const readMoreBtn = container.querySelector('.read-more-btn');
@@ -41,7 +41,7 @@ if (document.body.id === "homePage") {
 }
 
 
-// Run form validation only on contact page
+// Run form validation only on partner page
 if (document.body.id === "partnerPage") {
   const form = document.getElementById("myForm");
   if (form) {

@@ -51,7 +51,7 @@ body {
     animation: 3s spin linear infinite;
 }
 .blog::before , .blog2::before {
-    filter: blur(50px);
+    filter: blur(10px);
     opacity: 0.5;
 }
 @keyframes spin {
